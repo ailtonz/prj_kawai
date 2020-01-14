@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbKawaiModelStoreContainer" CdmEntityContainer="dbKawaiBanco">
+    <EntitySetMapping Name="Contrato">
+      <EntityTypeMapping TypeName="dbKawaiModel.Contrato">
+        <MappingFragment StoreEntitySet="Contrato">
+          <ScalarProperty Name="codigoEmpresa" ColumnName="codigoEmpresa" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Email">
+      <EntityTypeMapping TypeName="dbKawaiModel.Email">
+        <MappingFragment StoreEntitySet="Email">
+          <ScalarProperty Name="email" ColumnName="email1" />
+          <ScalarProperty Name="codigoTipo" ColumnName="codigoTipo" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailTipo">
+      <EntityTypeMapping TypeName="dbKawaiModel.EmailTipo">
+        <MappingFragment StoreEntitySet="EmailTipo">
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Endereco">
+      <EntityTypeMapping TypeName="dbKawaiModel.Endereco">
+        <MappingFragment StoreEntitySet="Endereco">
+          <ScalarProperty Name="codigoTipo" ColumnName="codigoTipo" />
+          <ScalarProperty Name="codigoUF" ColumnName="codigoUF" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="bairro" ColumnName="bairro" />
+          <ScalarProperty Name="complemento" ColumnName="complemento" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="logradouro" ColumnName="logradouro" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UF">
+      <EntityTypeMapping TypeName="dbKawaiModel.UF">
+        <MappingFragment StoreEntitySet="UF">
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaEmail">
+      <EntityTypeMapping TypeName="dbKawaiModel.EmpresaEmail">
+        <MappingFragment StoreEntitySet="EmpresaEmail">
+          <ScalarProperty Name="codigoEmpresa" ColumnName="codigoEmpresa" />
+          <ScalarProperty Name="codigoEmail" ColumnName="codigoEmail" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PessoaEmail">
+      <EntityTypeMapping TypeName="dbKawaiModel.PessoaEmail">
+        <MappingFragment StoreEntitySet="PessoaEmail">
+          <ScalarProperty Name="codigoPessoa" ColumnName="codigoPessoa" />
+          <ScalarProperty Name="codigoEmail" ColumnName="codigoEmail" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PessoaEndereco">
+      <EntityTypeMapping TypeName="dbKawaiModel.PessoaEndereco">
+        <MappingFragment StoreEntitySet="PessoaEndereco">
+          <ScalarProperty Name="codigoPessoa" ColumnName="codigoPessoa" />
+          <ScalarProperty Name="codigoEndereco" ColumnName="codigoEndereco" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PessoaTelefone">
+      <EntityTypeMapping TypeName="dbKawaiModel.PessoaTelefone">
+        <MappingFragment StoreEntitySet="PessoaTelefone">
+          <ScalarProperty Name="codigoPessoa" ColumnName="codigoPessoa" />
+          <ScalarProperty Name="codigoTelefone" ColumnName="codigoTelefone" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Login">
+      <EntityTypeMapping TypeName="dbKawaiModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="login" ColumnName="login1" />
+          <ScalarProperty Name="codigoPerfil" ColumnName="codigoPerfil" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Perfil">
+      <EntityTypeMapping TypeName="dbKawaiModel.Perfil">
+        <MappingFragment StoreEntitySet="Perfil">
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="perfil" ColumnName="perfil" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaEndereco">
+      <EntityTypeMapping TypeName="dbKawaiModel.EmpresaEndereco">
+        <MappingFragment StoreEntitySet="EmpresaEndereco">
+          <ScalarProperty Name="codigoEmpresa" ColumnName="codigoEmpresa" />
+          <ScalarProperty Name="codigoEndereco" ColumnName="codigoEndereco" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaTelefone">
+      <EntityTypeMapping TypeName="dbKawaiModel.EmpresaTelefone">
+        <MappingFragment StoreEntitySet="EmpresaTelefone">
+          <ScalarProperty Name="codigoEmpresa" ColumnName="codigoEmpresa" />
+          <ScalarProperty Name="codigoTelefone" ColumnName="codigoTelefone" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="dbKawaiModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Telefone">
+      <EntityTypeMapping TypeName="dbKawaiModel.Telefone">
+        <MappingFragment StoreEntitySet="Telefone">
+          <ScalarProperty Name="codigoTipo" ColumnName="codigoTipo" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="ddd" ColumnName="ddd" />
+          <ScalarProperty Name="ddi" ColumnName="ddi" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PessoaLogin">
+      <EntityTypeMapping TypeName="dbKawaiModel.PessoaLogin">
+        <MappingFragment StoreEntitySet="PessoaLogin">
+          <ScalarProperty Name="codigoPessoa" ColumnName="codigoPessoa" />
+          <ScalarProperty Name="codigoLogin" ColumnName="codigoLogin" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pessoa">
+      <EntityTypeMapping TypeName="dbKawaiModel.Pessoa">
+        <MappingFragment StoreEntitySet="Pessoa">
+          <ScalarProperty Name="codigoTipo" ColumnName="codigoTipo" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="ddd" ColumnName="ddd" />
+          <ScalarProperty Name="ddi" ColumnName="ddi" />
+          <ScalarProperty Name="cargo" ColumnName="cargo" />
+          <ScalarProperty Name="codigoLogin" ColumnName="codigoLogin" />
+          <ScalarProperty Name="codigoEmpresa" ColumnName="codigoEmpresa" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MovimentoGrupo">
+      <EntityTypeMapping TypeName="dbKawaiModel.MovimentoGrupo">
+        <MappingFragment StoreEntitySet="MovimentoGrupo">
+          <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MovimentoGrupoConta">
+      <EntityTypeMapping TypeName="dbKawaiModel.MovimentoGrupoConta">
+        <MappingFragment StoreEntitySet="MovimentoGrupoConta">
+          <ScalarProperty Name="Conta" ColumnName="Conta" />
+          <ScalarProperty Name="codigoGrupo" ColumnName="codigoGrupo" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MovimentoPagamento">
+      <EntityTypeMapping TypeName="dbKawaiModel.MovimentoPagamento">
+        <MappingFragment StoreEntitySet="MovimentoPagamento">
+          <ScalarProperty Name="FormaPagamento" ColumnName="FormaPagamento" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movimento">
+      <EntityTypeMapping TypeName="dbKawaiModel.Movimento">
+        <MappingFragment StoreEntitySet="Movimento">
+          <ScalarProperty Name="codigoPagamento" ColumnName="codigoPagamento" />
+          <ScalarProperty Name="codigoConta" ColumnName="codigoConta" />
+          <ScalarProperty Name="ValorFinal" ColumnName="ValorFinal" />
+          <ScalarProperty Name="dataPagamento" ColumnName="dataPagamento" />
+          <ScalarProperty Name="ValorOriginal" ColumnName="ValorOriginal" />
+          <ScalarProperty Name="dataVencimento" ColumnName="dataVencimento" />
+          <ScalarProperty Name="Observacao" ColumnName="Observacao" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="dataEmissao" ColumnName="dataEmissao" />
+          <ScalarProperty Name="codigoMovimento" ColumnName="codigoMovimento" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empresa">
+      <EntityTypeMapping TypeName="dbKawaiModel.Empresa">
+        <MappingFragment StoreEntitySet="Empresa">
+          <ScalarProperty Name="IE" ColumnName="IE" />
+          <ScalarProperty Name="controleCliente" ColumnName="controleCliente" />
+          <ScalarProperty Name="flagPessoaFisica" ColumnName="flagPessoaFisica" />
+          <ScalarProperty Name="codigoEndereco" ColumnName="codigoEndereco" />
+          <ScalarProperty Name="codigoMatriz" ColumnName="codigoMatriz" />
+          <ScalarProperty Name="site" ColumnName="site" />
+          <ScalarProperty Name="inscricaoEstadual" ColumnName="inscricaoEstadual" />
+          <ScalarProperty Name="CNPJ" ColumnName="CNPJ" />
+          <ScalarProperty Name="nomeFantasia" ColumnName="nomeFantasia" />
+          <ScalarProperty Name="razaoSocial" ColumnName="razaoSocial" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OSItem">
+      <EntityTypeMapping TypeName="dbKawaiModel.OSItem">
+        <MappingFragment StoreEntitySet="OSItem">
+          <ScalarProperty Name="valorServico" ColumnName="valorServico" />
+          <ScalarProperty Name="Observacao" ColumnName="Observacao" />
+          <ScalarProperty Name="codigoServico" ColumnName="codigoServico" />
+          <ScalarProperty Name="codigoControle" ColumnName="codigoControle" />
+          <ScalarProperty Name="codigoOS" ColumnName="codigoOS" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReservaOSItem">
+      <EntityTypeMapping TypeName="dbKawaiModel.ReservaOSItem">
+        <MappingFragment StoreEntitySet="ReservaOSItem">
+          <ScalarProperty Name="codigoReserva" ColumnName="codigoReserva" />
+          <ScalarProperty Name="codigoItem" ColumnName="codigoItem" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OSStatus">
+      <EntityTypeMapping TypeName="dbKawaiModel.OSStatus">
+        <MappingFragment StoreEntitySet="OSStatus">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AluguelTipo">
+      <EntityTypeMapping TypeName="dbKawaiModel.AluguelTipo">
+        <MappingFragment StoreEntitySet="AluguelTipo">
+          <ScalarProperty Name="codigoFormaPagamento" ColumnName="codigoFormaPagamento" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Item">
+      <EntityTypeMapping TypeName="dbKawaiModel.Item">
+        <MappingFragment StoreEntitySet="Item">
+          <ScalarProperty Name="flagAtivo" ColumnName="flagAtivo" />
+          <ScalarProperty Name="codigoAluguelTipo" ColumnName="codigoAluguelTipo" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReservaTipo">
+      <EntityTypeMapping TypeName="dbKawaiModel.ReservaTipo">
+        <MappingFragment StoreEntitySet="ReservaTipo">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reserva">
+      <EntityTypeMapping TypeName="dbKawaiModel.Reserva">
+        <MappingFragment StoreEntitySet="Reserva">
+          <ScalarProperty Name="dataCadastro" ColumnName="dataCadastro" />
+          <ScalarProperty Name="nomeResponsavel" ColumnName="nomeResponsavel" />
+          <ScalarProperty Name="nomeRequisitante" ColumnName="nomeRequisitante" />
+          <ScalarProperty Name="horaTerminio" ColumnName="horaTerminio" />
+          <ScalarProperty Name="horaInicio" ColumnName="horaInicio" />
+          <ScalarProperty Name="dataReserva" ColumnName="dataReserva" />
+          <ScalarProperty Name="codigoStatus" ColumnName="codigoStatus" />
+          <ScalarProperty Name="codigoEmpresa" ColumnName="codigoEmpresa" />
+          <ScalarProperty Name="codigoEstudio" ColumnName="codigoEstudio" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnderecoTipo">
+      <EntityTypeMapping TypeName="dbKawaiModel.EnderecoTipo">
+        <MappingFragment StoreEntitySet="EnderecoTipo">
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TelefoneTipo">
+      <EntityTypeMapping TypeName="dbKawaiModel.TelefoneTipo">
+        <MappingFragment StoreEntitySet="TelefoneTipo">
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OS">
+      <EntityTypeMapping TypeName="dbKawaiModel.OS">
+        <MappingFragment StoreEntitySet="OS">
+          <ScalarProperty Name="codigoTipo" ColumnName="codigoTipo" />
+          <ScalarProperty Name="codigoStatus" ColumnName="codigoStatus" />
+          <ScalarProperty Name="dataTerminio" ColumnName="dataTerminio" />
+          <ScalarProperty Name="dataInicio" ColumnName="dataInicio" />
+          <ScalarProperty Name="controleCliente" ColumnName="controleCliente" />
+          <ScalarProperty Name="Trabalho" ColumnName="Trabalho" />
+          <ScalarProperty Name="nomeResponsavel" ColumnName="nomeResponsavel" />
+          <ScalarProperty Name="nomeRequisitante" ColumnName="nomeRequisitante" />
+          <ScalarProperty Name="codigoEmpresa" ColumnName="codigoEmpresa" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PessoaTipo">
+      <EntityTypeMapping TypeName="dbKawaiModel.PessoaTipo">
+        <MappingFragment StoreEntitySet="PessoaTipo">
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,823 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+    background: #b6b7bc;
+    font-size: .80em;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI" , Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+    width: 920px;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 26px;
+    color: #2c5679;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 23px;
+    color: #2c5679;
+}
+
+h3
+{
+    font-size: 20px;
+    color: #2c5679;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 960px;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 100%;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color: #3a4f63;
+    width: 100%;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    margin: 1px;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline
+{
+    display: inline;
+}
+
+legend
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+
+/*úteis -- É BOM QUE FIQUE NO FINAL DO CSS*/
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl
+{
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-top-left-radius: 10px;
+    -khtml-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr
+{
+    -moz-border-radius-topright: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -khtml-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl
+{
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -khtml-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br
+{
+    -moz-border-radius-bottomright: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -khtml-border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.box-shadow
+{
+    -moz-box-shadow: 3px 3px 3px #ccc;
+    -webkit-box-shadow: 3px 3px 3px #ccc;
+    box-shadow: 3px 3px 3px #ccc;
+}
+.box_textshadow
+{
+    text-shadow: 1px 1px 1px #999; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+}
+.hidden
+{
+    display: none;
+}
+.show
+{
+    display: block;
+}
+.overHidden
+{
+    overflow: hidden;
+}
+.overScroll
+{
+    overflow: scroll;
+}
+.overAuto
+{
+    overflow: auto;
+}
+.inline
+{
+    display: inline;
+}
+.block
+{
+    display: block;
+}
+.mauto
+{
+    margin: auto;
+}
+.h100px
+{
+    height: 100px;
+}
+.h200px
+{
+    height: 200px;
+}
+
+.w1pct
+{
+    width: 1%;
+}
+.w50pct
+{
+    width: 50%;
+}
+.w60pct
+{
+    width: 60%;
+}
+.w70pct
+{
+    width: 70%;
+}
+.w80pct
+{
+    width: 80%;
+}
+.w90pct
+{
+    width: 90%;
+}
+.w95pct
+{
+    width: 95%;
+}
+.w98pct
+{
+    width: 98%;
+}
+.w100pct
+{
+    width: 100%;
+}
+.torange
+{
+    color: #ff6402;
+}
+.tred
+{
+    color: #ed1c24;
+}
+.tblue
+{
+    color: #0072bc;
+}
+.tgrey
+{
+    color: #696969;
+}
+.tlightgrey
+{
+    color: #888888;
+}
+.tleft
+{
+    text-align: left;
+}
+.tright
+{
+    text-align: right;
+}
+.tcenter
+{
+    text-align: center;
+}
+.fleft
+{
+    float: left;
+}
+.fright
+{
+    float: right;
+}
+.cleared
+{
+    clear: both;
+}
+.clearLeft
+{
+    clear: left;
+}
+.clearRight
+{
+    clear: right;
+}
+.font10
+{
+    font-size: 10px;
+}
+.font11
+{
+    font-size: 11px;
+}
+.font12
+{
+    font-size: 12px;
+}
+.font13
+{
+    font-size: 13px;
+}
+.font14
+{
+    font-size: 14px;
+}
+.font15
+{
+    font-size: 15px;
+}
+.m10
+{
+    margin: 10px;
+}
+.m10t
+{
+    margin-top: 10px;
+}
+.m10b
+{
+    margin-bottom: 10px;
+}
+.m10l
+{
+    margin-left: 10px;
+}
+.m10r
+{
+    margin-right: 10px;
+}
+.m20r
+{
+    margin-right: 20px;
+}
+.m15t
+{
+    margin-top: 15px;
+}
+.m20t
+{
+    margin-top: 20px;
+}
+.m30t
+{
+    margin-top: 30px;
+}
+.m3
+{
+    margin: 10px;
+}
+.m3t
+{
+    margin-top: 10px;
+}
+.m3b
+{
+    margin-bottom: 10px;
+}
+.m3l
+{
+    margin-left: 10px;
+}
+.m3r
+{
+    margin-right: 10px;
+}
+.m5b
+{
+    margin-bottom: 5px;
+}
+.m5r
+{
+    margin-right: 5px;
+}
+.p5
+{
+    padding: 5px;
+}
+.p10
+{
+    padding: 10px;
+}
+.p10t
+{
+    padding-top: 10px;
+}
+.p10b
+{
+    padding-bottom: 10px;
+}
+.p10l
+{
+    padding-left: 10px;
+}
+.p10r
+{
+    padding-right: 10px;
+}
+.p20t
+{
+    padding-top: 20px;
+}
+.p30t
+{
+    padding-top: 30px;
+}
+.bold
+{
+    font-weight: bold;
+}
+.normal
+{
+    font-weight: normal;
+}
+.small
+{
+    font-size: 10px;
+    color: #8b0304;
+}
+.black
+{
+    color: #000000;
+}
+.red
+{
+    color: #ff0000;
+}
+.blue
+{
+    color: #2c5679;
+}
+.foto
+{
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    padding: 5px;
+    background-image: url("../images/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.fotoAluno
+{
+    width: 150px;
+    height: 113px;
+    background-image: url("../images/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.fotoAlunoMaior
+{
+    width: 150px;
+    height: 113px;
+    background-image: url("../images/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.relative
+{
+    position: relative;
+}
+.absolute
+{
+    position: absolute;
+}
+.pointer
+{
+    cursor: pointer;
+}
+
+a .foto:hover
+{
+    background-color: #eeeeee;
+}
+.bordaAzul
+{
+    border: 1px solid #0072BC;
+}
+.bordaCinza
+{
+    border: 1px solid #cccccc;
+}
+.bordaCinza2
+{
+    border: 1px solid #eeeeee;
+}
+.bordaVermelha
+{
+    border: 1px solid #ED1C24;
+}
+
+.padButton, .padButton2
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: #dde4ec;
+    padding: 4px 20px;
+}
+.padButton2
+{
+    background-color: #f5f5f5;
+    color: #666666;
+}
+.padButton:active, .padButton2:active
+{
+    background-color: #1a4c77;
+}
+
+
+
+/*gridView*/
+.table1
+{
+    font-size: 11px;
+}
+.table1 td, .table1 th
+{
+    border-right: 1px solid #ffffff;
+    padding: 3px;
+}
+.table1 input[type=text]:focus
+{
+    border-top: 2px solid #0072bc;
+    border-left: 2px solid #0072bc;
+    border-bottom: 2px solid #30a2ec;
+    border-right: 2px solid #30a2ec;
+}
+.headerTable1
+{
+    background-color: #0072bc;
+    color: #ffffff;
+}
+.headerTable1 .bordaAzul
+{
+    color: #696969;
+}
+.headerTable1 th
+{
+    padding: 3px;
+}
+.headerTable1 th a:link, .headerTable1 th a:visited
+{
+    color: #ffffff;
+    text-decoration: underline;
+}
+.headerTable1 th a:hover, .headerTable1 th a:active
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+.paginacaoPesquisa td
+{
+    text-align: center;
+}
+.paginacaoPesquisa table
+{
+    text-align: center;
+    font-size: 12px;
+    margin: 2px auto;
+}
+.paginacaoPesquisa span
+{
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    padding: 5px;
+}
+.paginacaoPesquisa a
+{
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid;
+    display: block;
+}
+.paginacaoPesquisa a:link, .paginacaoPesquisa a:visited
+{
+    color: #666666;
+    border-color: #aaaaaa;
+}
+.paginacaoPesquisa a:hover
+{
+    text-decoration: none;
+    border-color: #3399ff;
+}
+.paginacaoPesquisa a:active
+{
+    text-decoration: none;
+    border-color: #ff9900;
+}
+.even
+{
+    background-color: #f5f5f5;
+    padding-top: 1px;
+}
+.odd
+{
+    background-color: #ffffff;
+    padding-top: 1px;
+}
+.even td, .odd td, .tabelaPesquisa th
+{
+    border: 1px solid #cccccc;
+}
+.even:hover, .odd:hover
+{
+    background-color: #e2f2ff;
+}
+
+
+/*fecha GridView*/
+
+.divFlutuante
+{
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    z-index: 1000;
+}
+
+.divPosiciona
+{
+    position: fixed;
+    top: 30%;
+    left: 43%;
+    padding: 10px;
+    width: 230px;
+    z-index: 1001;
+    background-color: #fff;
+    border: solid 1px #000;
+    text-align: center;
+}

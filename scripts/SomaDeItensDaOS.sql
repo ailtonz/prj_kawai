@@ -1,0 +1,1 @@
+Select codigoOS, SUM(valorServico) as total01 from OSItem where codigoControle=1 GROUP BY codigoOS;

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DE62A01B-94B5-46A0-A787-E98E8D3D9117}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>kawaiNeg</RootNamespace>
+    <AssemblyName>kawaiNeg</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="nePessoaTipo.cs" />
+    <Compile Include="neEnderecoTipo.cs" />
+    <Compile Include="neReserva.cs" />
+    <Compile Include="neOSStatus.cs" />
+    <Compile Include="neReservaTipo.cs" />
+    <Compile Include="neOSItem.cs" />
+    <Compile Include="neMovimento.cs" />
+    <Compile Include="neMovimentoGrupoConta.cs" />
+    <Compile Include="neMovimentoGrupo.cs" />
+    <Compile Include="neMovimentoPagamento.cs" />
+    <Compile Include="neServico.cs" />
+    <Compile Include="neUF.cs" />
+    <Compile Include="neEndereco.cs" />
+    <Compile Include="neOS.cs" />
+    <Compile Include="neItem.cs" />
+    <Compile Include="nePessoa.cs" />
+    <Compile Include="neLogin.cs" />
+    <Compile Include="neTelefone.cs" />
+    <Compile Include="neEmpresa.cs" />
+    <Compile Include="neContrato.cs" />
+    <Compile Include="neEmail.cs" />
+    <Compile Include="neEmailTipo.cs" />
+    <Compile Include="neAluguelTipo.cs" />
+    <Compile Include="neTelefoneTipo.cs" />
+    <Compile Include="nePerfil.cs" />
+    <Compile Include="neKawai.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\kawaiBco\kawaiBco.csproj">
+      <Project>{7170C678-3706-4E70-8981-0CC429B03A08}</Project>
+      <Name>kawaiBco</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\kawaiEnt\kawaiEnt.csproj">
+      <Project>{5ECA31F4-3006-4E25-BE05-455DAF0E5B01}</Project>
+      <Name>kawaiEnt</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

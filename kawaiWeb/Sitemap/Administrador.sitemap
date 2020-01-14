@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode url="" title="Administrador"  description="Administrador">
+
+    <siteMapNode url="" title="Agenda" description="Agenda de reservas">
+      <siteMapNode url="~/CadastroReserva.aspx" title="Reservas"  description="Controle de Reservas" />
+      <siteMapNode url="/CadastroReservaTipo.aspx" title="Status da Reserva"  description="Status da Reserva" />
+    </siteMapNode>
+
+    <siteMapNode url="" title="Cadastros" description="Modulo Cadastros">
+      <siteMapNode url="~/CadastroEmpresa.aspx" title="Clientes"  description="Clientes" />
+      
+      <siteMapNode url="" title="Categorias" description="Modulo Categorias">
+        <siteMapNode url="/CadastroEnderecoTipo.aspx" title="Tipos de Endereços"  description="Tipos de Endereços" />
+        <siteMapNode url="/CadastroTelefoneTipo.aspx" title="Tipos de Telefones"  description="Tipos de Telefones" />
+        <siteMapNode url="/CadastroPessoaTipo.aspx" title="Tipos de Contatos"  description="Tipos de Contatos" />
+      </siteMapNode>
+      
+    </siteMapNode>    
+    
+    <siteMapNode url="" title="Serviços" description="Controle de serviços">
+      <siteMapNode url="~/CadastroOrdemServico.aspx" title="Ordens de Serviços"  description="Ordens de Serviços" />
+      <siteMapNode url="/CadastroOrdemServicoStatus.aspx" title="Ordens de Serviços - Status"  description="Status das Ordens de Serviço" />
+      <siteMapNode url="~/CadastroServico.aspx" title="Serviços x Valores"  description="Serviços x Valores" />
+      <siteMapNode url="/CadastroAluguelTipo.aspx" title="Tipo de Serviço"  description="Tipo de Serviço" />
+    </siteMapNode>    
+        
+    <siteMapNode url="" title="Faturamento" description="Modulo Faturamento">
+      <siteMapNode url="~/ListaOS.aspx" title="Fechar Ordens de serviços"  description="Fechar Ordens de serviços" />
+      <siteMapNode url="~/CadastroRecibo.aspx" title="Recibos"  description="Cadastro de recibos" />
+      <siteMapNode url="~/Envio.aspx" title="Envio"  description="Envio de e-mails" />      
+    </siteMapNode>    
+    
+    
+    <siteMapNode url="" title="Financeiro" description="Modulo Financeiro">
+      <siteMapNode url="~/CadastroReceita.aspx" title="Receitas"  description="Cadastro de receitas" />
+      <siteMapNode url="~/CadastroDespesa.aspx" title="Despesas"  description="Cadastro de despesas" />
+
+      <siteMapNode url="" title="Categorias" description="Modulo Envio">
+        <siteMapNode url="~/CadastroPlanoContas.aspx" title="Plano de Contas"  description="Plano de Contas" />
+        <siteMapNode url="/CadastroPlanoGrupo.aspx" title="Plano de Contas - Grupos"  description="Grupo de Planos de Contas" />
+        <siteMapNode url="~/CadastroPagamento.aspx" title="Formas de Pagamentos / Recebimentos"  description="Formas de pagamentos e recebimentos" />
+      </siteMapNode>
+
+    </siteMapNode>
+  
+      
+    <siteMapNode url="" title="Sistema" description="">
+      <siteMapNode url="" title="Adm de acessos"  description="Administração de acessos ao sistema" />
+      <siteMapNode url="" title="Sobre o Sistema"  description="Sobre o Sistema" />
+      <!--<siteMapNode url="~/About.aspx" title="Sobre o Sistema"  description="Sobre o Sistema" />-->
+    </siteMapNode>  
+
+    <siteMapNode url="~/Default.aspx" title="Sair"  description="Sair do Sistema" />
+  </siteMapNode>
+</siteMap>

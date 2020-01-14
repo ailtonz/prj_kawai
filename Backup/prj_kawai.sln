@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kawaiWeb", "kawaiWeb\kawaiWeb.csproj", "{252B8A0C-581F-429E-B353-582DE11528E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kawaiNeg", "kawaiNeg\kawaiNeg.csproj", "{DE62A01B-94B5-46A0-A787-E98E8D3D9117}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kawaiBco", "kawaiBco\kawaiBco.csproj", "{7170C678-3706-4E70-8981-0CC429B03A08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kawaiEnt", "kawaiEnt\kawaiEnt.csproj", "{5ECA31F4-3006-4E25-BE05-455DAF0E5B01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{252B8A0C-581F-429E-B353-582DE11528E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{252B8A0C-581F-429E-B353-582DE11528E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{252B8A0C-581F-429E-B353-582DE11528E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{252B8A0C-581F-429E-B353-582DE11528E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE62A01B-94B5-46A0-A787-E98E8D3D9117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE62A01B-94B5-46A0-A787-E98E8D3D9117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE62A01B-94B5-46A0-A787-E98E8D3D9117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE62A01B-94B5-46A0-A787-E98E8D3D9117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7170C678-3706-4E70-8981-0CC429B03A08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7170C678-3706-4E70-8981-0CC429B03A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7170C678-3706-4E70-8981-0CC429B03A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7170C678-3706-4E70-8981-0CC429B03A08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ECA31F4-3006-4E25-BE05-455DAF0E5B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ECA31F4-3006-4E25-BE05-455DAF0E5B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ECA31F4-3006-4E25-BE05-455DAF0E5B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ECA31F4-3006-4E25-BE05-455DAF0E5B01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

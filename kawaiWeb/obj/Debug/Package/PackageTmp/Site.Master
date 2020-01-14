@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="kawaiWeb.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Kawai Sistema</title>
+    <style type="text/css">
+        #progressBackgroundFilter
+        {
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            background-color: #000;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+            z-index: 1000;
+        }
+        
+        #processMessage
+        {
+            position: fixed;
+            top: 30%;
+            left: 43%;
+            padding: 10px;
+            width: 230px;
+            z-index: 1001;
+            background-color: #fff;
+            border: solid 1px #000;
+        }
+    </style>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <script type="text/javascript">
+        var cronoMessage;
+
+        /*
+        window.onload = function () {
+        document.getElementById("progressBackgroundFilter").removeAttribute("class");
+        document.getElementById("processMessage").removeAttribute("class");
+        }
+        */
+
+
+
+
+        Sys.Application.add_load(AppLoad);
+
+        function AppLoad() {
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequest);
+        }
+        var alertou = false;
+        function EndRequest(sender, args) {
+            // Check to see if there's an error on this request.
+            if (args.get_error() != undefined) {
+
+                var msg = "name: " + args.get_error().name + " \nmessage: " + args.get_error().message + " \ndescription:" + args.get_error().description + "\nhttpStatusCode:" + args.get_error().httpStatusCode;
+
+                // Show the custom error. 
+                // Here you can be creative and do whatever you want
+                // with the exception (i.e. call a modalpopup and show 
+                // a nicer error window). I will simply use 'alert'
+                var texto = "Aviso\n";
+                texto += "Ocorreu um erro em sua conexão com o Servidor.\n";
+                texto += "Sua sessão será reiniciada, por favor faça o login novamente.\n";
+                texto += "Se este evento persistir, entre em contato com a equipe de TI.";
+                if (msg.indexOf("12030", 0) != -1) {
+                    if (alertou == false) {
+                        alertou = true;
+                        alert(texto);
+                        window.location = "Default.aspx";
+                    }
+                } else {
+                    if (msg.indexOf("500", 0) != -1) {
+                        if (alertou == false) {
+                            alertou = true;
+                            alert(texto);
+                            window.location = "Default.aspx";
+                        }
+                    } else {
+                        if (alertou == false) {
+                            alertou = true;
+                            alert(texto);
+                            window.location = "Default.aspx";
+                        }
+                    }
+                }
+
+                // Let the framework know that the error is handled, 
+                //  so it doesn't throw the JavaScript alert.
+                args.set_errorHandled(true);
+            }
+        }
+    </script>
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    Kawai Sistemas
+                </h1>
+            </div>
+            <div class="loginDisplay">
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" IncludeStyleBlock="False"
+                    Orientation="Horizontal" StaticSubMenuIndent="16px">
+                </asp:Menu>
+                <asp:SiteMapDataSource ID="SMDS" runat="server" ShowStartingNode="False" />
+            </div>
+        </div>
+        <div class="clear tright m10r" style="width: 99%">
+            <asp:SiteMapPath ID="SiteMapPathMenu" runat="server" Font-Names="Verdana" Font-Size="0.8em"
+                PathSeparator=" : " Width="100%">
+                <CurrentNodeStyle ForeColor="#333333" />
+                <NodeStyle Font-Bold="True" ForeColor="#284E98" />
+                <PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1" />
+                <RootNodeStyle Font-Bold="True" ForeColor="#507CD1" />
+            </asp:SiteMapPath>
+        </div>
+        <div class="main">
+            <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptLocalization="true"
+                EnableScriptGlobalization="true" 
+                onasyncpostbackerror="ScriptManager1_AsyncPostBackError">
+            </asp:ScriptManager>
+            
+            <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+                <ProgressTemplate>
+                <div id="progressBackgroundFilter" class="hidden"></div>
+                    <div id="processMessage" class="hidden">
+                        <img alt="Carregando..." src="Images/carregando.gif" />
+                    </div>
+                </ProgressTemplate>
+            </asp:UpdateProgress>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    </form>
+</body>
+</html>

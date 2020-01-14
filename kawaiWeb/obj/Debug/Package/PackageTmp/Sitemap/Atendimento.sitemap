@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode url="" title="Perfil de Atendimento"  description="Perfil de Atendimento">
+
+    <siteMapNode url="" title="Agenda" description="Modulo Agenda">
+      <siteMapNode url="~/CadastroReserva.aspx" title="Reservas"  description="Agendar Reservas" />
+    </siteMapNode>    
+    
+    <siteMapNode url="" title="Cadastros" description="Modulo Cliente">
+      <siteMapNode url="~/CadastroEmpresa.aspx" title="Clientes"  description="Clientes" />
+      <siteMapNode url="~/CadastroOrdemServico.aspx" title="Ordens de Serviços"  description="Ordens de Serviços" />
+    </siteMapNode>
+
+    <siteMapNode url="~/logado.aspx" title="Usuário"  description="Dados do usuário logado" />
+    <siteMapNode url="~/Default.aspx" title="Sair"  description="Sair do Sistema" />
+  </siteMapNode>
+</siteMap>

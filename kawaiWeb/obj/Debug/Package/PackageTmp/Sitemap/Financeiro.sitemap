@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode url="" title="Financeiro"  description="Financeiro">
+
+    <siteMapNode url="" title="Agenda" description="Modulo Agenda">
+      <siteMapNode url="~/CadastroReserva.aspx" title="Reservas"  description="Agendar Reservas" />
+    </siteMapNode>
+
+    <siteMapNode url="" title="Cadastros" description="Modulo Cliente">
+      <siteMapNode url="~/CadastroEmpresa.aspx" title="Clientes"  description="Clientes" />
+      <siteMapNode url="~/CadastroOrdemServico.aspx" title="Ordens de Serviços"  description="Ordens de Serviços" />
+      <siteMapNode url="~/CadastroServico.aspx" title="Serviços / Valores"  description="Serviços / Valores" />
+
+      <siteMapNode url="" title="Categorias" description="Modulo Categorias">
+        <siteMapNode url="/CadastroAluguelTipo.aspx" title="Tipo de Serviço"  description="Tipo de Serviço" />
+        <siteMapNode url="/CadastroReservaTipo.aspx" title="Status da Reserva"  description="Status da Reserva" />
+        <siteMapNode url="/CadastroOrdemServicoStatus.aspx" title="Status da Ordem de Serviço"  description="Status da Ordem de Serviço" />
+      </siteMapNode>
+      
+    </siteMapNode>
+
+    <siteMapNode url="" title="Transações" description="Modulo Transações">
+      <siteMapNode url="~/CadastroReceita.aspx" title="Receitas"  description="Cadastro de receitas" />
+      <siteMapNode url="~/CadastroDespesa.aspx" title="Despesas"  description="Cadastro de despesas" />
+      <siteMapNode url="~/CadastroGrupo.aspx" title="Plano de Contas"  description="Plano de Contas" />
+      <siteMapNode url="~/CadastroPagamento.aspx" title="Formas de pagamentos"  description="Formas de pagamentos" />
+    </siteMapNode>
+
+    <siteMapNode url="~/Default.aspx" title="Sair"  description="Sair do Sistema" />
+  </siteMapNode>
+</siteMap>

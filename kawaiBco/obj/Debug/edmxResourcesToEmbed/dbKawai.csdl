@@ -1,0 +1,958 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbKawaiModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="dbKawaiBanco" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Contrato" EntityType="dbKawaiModel.Contrato" />
+    <EntitySet Name="Email" EntityType="dbKawaiModel.Email" />
+    <EntitySet Name="EmailTipo" EntityType="dbKawaiModel.EmailTipo" />
+    <EntitySet Name="Endereco" EntityType="dbKawaiModel.Endereco" />
+    <EntitySet Name="UF" EntityType="dbKawaiModel.UF" />
+    <AssociationSet Name="FK_Email_EmailTipo" Association="dbKawaiModel.FK_Email_EmailTipo">
+      <End EntitySet="EmailTipo" Role="EmailTipo" />
+      <End EntitySet="Email" Role="Email" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Endereco_UF" Association="dbKawaiModel.FK_Endereco_UF">
+      <End Role="UF" EntitySet="UF" />
+      <End Role="Endereco" EntitySet="Endereco" />
+    </AssociationSet>
+    <EntitySet Name="EmpresaEmail" EntityType="dbKawaiModel.EmpresaEmail" />
+    <AssociationSet Name="FK_EmpresaEmail_Email" Association="dbKawaiModel.FK_EmpresaEmail_Email">
+      <End Role="Email" EntitySet="Email" />
+      <End Role="EmpresaEmail" EntitySet="EmpresaEmail" />
+    </AssociationSet>
+    <EntitySet Name="PessoaEmail" EntityType="dbKawaiModel.PessoaEmail" />
+    <EntitySet Name="PessoaEndereco" EntityType="dbKawaiModel.PessoaEndereco" />
+    <EntitySet Name="PessoaTelefone" EntityType="dbKawaiModel.PessoaTelefone" />
+    <AssociationSet Name="FK_PessoaEmail_Email" Association="dbKawaiModel.FK_PessoaEmail_Email">
+      <End Role="Email" EntitySet="Email" />
+      <End Role="PessoaEmail" EntitySet="PessoaEmail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PessoaEndereco_Endereco" Association="dbKawaiModel.FK_PessoaEndereco_Endereco">
+      <End Role="Endereco" EntitySet="Endereco" />
+      <End Role="PessoaEndereco" EntitySet="PessoaEndereco" />
+    </AssociationSet>
+    <EntitySet Name="Login" EntityType="dbKawaiModel.Login" />
+    <EntitySet Name="Perfil" EntityType="dbKawaiModel.Perfil" />
+    <AssociationSet Name="FK_Login_Perfil" Association="dbKawaiModel.FK_Login_Perfil">
+      <End Role="Perfil" EntitySet="Perfil" />
+      <End Role="Login" EntitySet="Login" />
+    </AssociationSet>
+    <EntitySet Name="EmpresaEndereco" EntityType="dbKawaiModel.EmpresaEndereco" />
+    <AssociationSet Name="FK_EmpresaEndereco_Endereco" Association="dbKawaiModel.FK_EmpresaEndereco_Endereco">
+      <End Role="Endereco" EntitySet="Endereco" />
+      <End Role="EmpresaEndereco" EntitySet="EmpresaEndereco" />
+    </AssociationSet>
+    <EntitySet Name="EmpresaTelefone" EntityType="dbKawaiModel.EmpresaTelefone" />
+    <EntitySet Name="sysdiagrams" EntityType="dbKawaiModel.sysdiagrams" />
+    <EntitySet Name="Telefone" EntityType="dbKawaiModel.Telefone" />
+    <AssociationSet Name="FK_EmpresaTelefone_Telefone" Association="dbKawaiModel.FK_EmpresaTelefone_Telefone">
+      <End Role="Telefone" EntitySet="Telefone" />
+      <End Role="EmpresaTelefone" EntitySet="EmpresaTelefone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PessoaTelefone_Telefone" Association="dbKawaiModel.FK_PessoaTelefone_Telefone">
+      <End Role="Telefone" EntitySet="Telefone" />
+      <End Role="PessoaTelefone" EntitySet="PessoaTelefone" />
+    </AssociationSet>
+    <EntitySet Name="PessoaLogin" EntityType="dbKawaiModel.PessoaLogin" />
+    <AssociationSet Name="FK_PessoaLogin_Login" Association="dbKawaiModel.FK_PessoaLogin_Login">
+      <End Role="Login" EntitySet="Login" />
+      <End Role="PessoaLogin" EntitySet="PessoaLogin" />
+    </AssociationSet>
+    <EntitySet Name="Pessoa" EntityType="dbKawaiModel.Pessoa" />
+    <AssociationSet Name="FK_Pessoa_Login" Association="dbKawaiModel.FK_Pessoa_Login">
+      <End Role="Login" EntitySet="Login" />
+      <End Role="Pessoa" EntitySet="Pessoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PessoaEmail_Pessoa" Association="dbKawaiModel.FK_PessoaEmail_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="PessoaEmail" EntitySet="PessoaEmail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PessoaEndereco_Pessoa" Association="dbKawaiModel.FK_PessoaEndereco_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="PessoaEndereco" EntitySet="PessoaEndereco" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PessoaLogin_Pessoa" Association="dbKawaiModel.FK_PessoaLogin_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="PessoaLogin" EntitySet="PessoaLogin" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PessoaTelefone_Pessoa" Association="dbKawaiModel.FK_PessoaTelefone_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="PessoaTelefone" EntitySet="PessoaTelefone" />
+    </AssociationSet>
+    <EntitySet Name="MovimentoGrupo" EntityType="dbKawaiModel.MovimentoGrupo" />
+    <EntitySet Name="MovimentoGrupoConta" EntityType="dbKawaiModel.MovimentoGrupoConta" />
+    <EntitySet Name="MovimentoPagamento" EntityType="dbKawaiModel.MovimentoPagamento" />
+    <AssociationSet Name="FK_MovimentoGrupoConta_MovimentoGrupo" Association="dbKawaiModel.FK_MovimentoGrupoConta_MovimentoGrupo">
+      <End Role="MovimentoGrupo" EntitySet="MovimentoGrupo" />
+      <End Role="MovimentoGrupoConta" EntitySet="MovimentoGrupoConta" />
+    </AssociationSet>
+    <EntitySet Name="Movimento" EntityType="dbKawaiModel.Movimento" />
+    <AssociationSet Name="FK_Movimento_MovimentoPagamento" Association="dbKawaiModel.FK_Movimento_MovimentoPagamento">
+      <End Role="MovimentoPagamento" EntitySet="MovimentoPagamento" />
+      <End Role="Movimento" EntitySet="Movimento" />
+    </AssociationSet>
+    <EntitySet Name="Empresa" EntityType="dbKawaiModel.Empresa" />
+    <AssociationSet Name="FK_Contrato_Empresa" Association="dbKawaiModel.FK_Contrato_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Contrato" EntitySet="Contrato" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_Empresa" Association="dbKawaiModel.FK_Empresa_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Empresa1" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaEmail_Empresa" Association="dbKawaiModel.FK_EmpresaEmail_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaEmail" EntitySet="EmpresaEmail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaEndereco_Empresa" Association="dbKawaiModel.FK_EmpresaEndereco_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaEndereco" EntitySet="EmpresaEndereco" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaTelefone_Empresa" Association="dbKawaiModel.FK_EmpresaTelefone_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaTelefone" EntitySet="EmpresaTelefone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pessoa_Empresa" Association="dbKawaiModel.FK_Pessoa_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Pessoa" EntitySet="Pessoa" />
+    </AssociationSet>
+    <EntitySet Name="OSItem" EntityType="dbKawaiModel.OSItem" />
+    <EntitySet Name="ReservaOSItem" EntityType="dbKawaiModel.ReservaOSItem" />
+    <AssociationSet Name="FK_ReservaOSItem_OSItem" Association="dbKawaiModel.FK_ReservaOSItem_OSItem">
+      <End Role="OSItem" EntitySet="OSItem" />
+      <End Role="ReservaOSItem" EntitySet="ReservaOSItem" />
+    </AssociationSet>
+    <EntitySet Name="OSStatus" EntityType="dbKawaiModel.OSStatus" />
+    <EntitySet Name="AluguelTipo" EntityType="dbKawaiModel.AluguelTipo" />
+    <EntitySet Name="Item" EntityType="dbKawaiModel.Item" />
+    <AssociationSet Name="FK_Item_AluguelTipo" Association="dbKawaiModel.FK_Item_AluguelTipo">
+      <End Role="AluguelTipo" EntitySet="AluguelTipo" />
+      <End Role="Item" EntitySet="Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OSItem_Item" Association="dbKawaiModel.FK_OSItem_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="OSItem" EntitySet="OSItem" />
+    </AssociationSet>
+    <EntitySet Name="ReservaTipo" EntityType="dbKawaiModel.ReservaTipo" />
+    <EntitySet Name="Reserva" EntityType="dbKawaiModel.Reserva" />
+    <AssociationSet Name="FK_Reserva_ReservaTipo" Association="dbKawaiModel.FK_Reserva_ReservaTipo">
+      <End Role="ReservaTipo" EntitySet="ReservaTipo" />
+      <End Role="Reserva" EntitySet="Reserva" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReservaOSItem_Reserva" Association="dbKawaiModel.FK_ReservaOSItem_Reserva">
+      <End Role="Reserva" EntitySet="Reserva" />
+      <End Role="ReservaOSItem" EntitySet="ReservaOSItem" />
+    </AssociationSet>
+    <EntitySet Name="EnderecoTipo" EntityType="dbKawaiModel.EnderecoTipo" />
+    <EntitySet Name="TelefoneTipo" EntityType="dbKawaiModel.TelefoneTipo" />
+    <AssociationSet Name="FK_Endereco_EnderecoTipo" Association="dbKawaiModel.FK_Endereco_EnderecoTipo">
+      <End Role="EnderecoTipo" EntitySet="EnderecoTipo" />
+      <End Role="Endereco" EntitySet="Endereco" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Telefone_TelefoneTipo" Association="dbKawaiModel.FK_Telefone_TelefoneTipo">
+      <End Role="TelefoneTipo" EntitySet="TelefoneTipo" />
+      <End Role="Telefone" EntitySet="Telefone" />
+    </AssociationSet>
+    <EntitySet Name="OS" EntityType="dbKawaiModel.OS" />
+    <AssociationSet Name="FK_OS_Empresa" Association="dbKawaiModel.FK_OS_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="OS" EntitySet="OS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OS_OSStatus" Association="dbKawaiModel.FK_OS_OSStatus">
+      <End Role="OSStatus" EntitySet="OSStatus" />
+      <End Role="OS" EntitySet="OS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OSItem_OS" Association="dbKawaiModel.FK_OSItem_OS">
+      <End Role="OS" EntitySet="OS" />
+      <End Role="OSItem" EntitySet="OSItem" />
+    </AssociationSet>
+    <EntitySet Name="PessoaTipo" EntityType="dbKawaiModel.PessoaTipo" />
+    <AssociationSet Name="PessoaTipoPessoa" Association="dbKawaiModel.PessoaTipoPessoa">
+      <End Role="PessoaTipo" EntitySet="PessoaTipo" />
+      <End Role="Pessoa" EntitySet="Pessoa" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Contrato">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoEmpresa" />
+    <NavigationProperty Name="Empresa" Relationship="dbKawaiModel.FK_Contrato_Empresa" FromRole="Contrato" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="email" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="codigoTipo" />
+    <NavigationProperty Name="EmailTipo" Relationship="dbKawaiModel.FK_Email_EmailTipo" FromRole="Email" ToRole="EmailTipo" />
+    <NavigationProperty Name="EmpresaEmail" Relationship="dbKawaiModel.FK_EmpresaEmail_Email" FromRole="Email" ToRole="EmpresaEmail" />
+    <NavigationProperty Name="PessoaEmail" Relationship="dbKawaiModel.FK_PessoaEmail_Email" FromRole="Email" ToRole="PessoaEmail" />
+  </EntityType>
+  <EntityType Name="EmailTipo">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Nullable="false" Type="Int32" />
+    <Property Name="descricao" MaxLength="255" FixedLength="false" Unicode="false" Type="String" />
+    <NavigationProperty Name="Email" Relationship="dbKawaiModel.FK_Email_EmailTipo" FromRole="EmailTipo" ToRole="Email" />
+  </EntityType>
+  <EntityType Name="Endereco">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="logradouro" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="numero" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="complemento" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="bairro" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CEP" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Cidade" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="codigoUF" />
+    <Property Type="Int32" Name="codigoTipo" />
+    <NavigationProperty Name="UF" Relationship="dbKawaiModel.FK_Endereco_UF" FromRole="Endereco" ToRole="UF" />
+    <NavigationProperty Name="PessoaEndereco" Relationship="dbKawaiModel.FK_PessoaEndereco_Endereco" FromRole="Endereco" ToRole="PessoaEndereco" />
+    <NavigationProperty Name="EmpresaEndereco" Relationship="dbKawaiModel.FK_EmpresaEndereco_Endereco" FromRole="Endereco" ToRole="EmpresaEndereco" />
+    <NavigationProperty Name="EnderecoTipo" Relationship="dbKawaiModel.FK_Endereco_EnderecoTipo" FromRole="Endereco" ToRole="EnderecoTipo" />
+  </EntityType>
+  <EntityType Name="UF">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="descricao" MaxLength="2" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Endereco" Relationship="dbKawaiModel.FK_Endereco_UF" FromRole="UF" ToRole="Endereco" />
+  </EntityType>
+  <Association Name="FK_Email_EmailTipo">
+    <End Type="dbKawaiModel.EmailTipo" Multiplicity="0..1" Role="EmailTipo" />
+    <End Type="dbKawaiModel.Email" Multiplicity="*" Role="Email" />
+    <ReferentialConstraint>
+      <Principal Role="EmailTipo">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Email">
+        <PropertyRef Name="codigoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Endereco_UF">
+    <End Type="dbKawaiModel.UF" Role="UF" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.Endereco" Role="Endereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UF">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="codigoUF" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EmpresaEmail">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoEmail" />
+    <Property Type="Int32" Name="codigoEmpresa" />
+    <NavigationProperty Name="Email" Relationship="dbKawaiModel.FK_EmpresaEmail_Email" FromRole="EmpresaEmail" ToRole="Email" />
+    <NavigationProperty Name="Empresa" Relationship="dbKawaiModel.FK_EmpresaEmail_Empresa" FromRole="EmpresaEmail" ToRole="Empresa" />
+  </EntityType>
+  <Association Name="FK_EmpresaEmail_Email">
+    <End Type="dbKawaiModel.Email" Role="Email" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.EmpresaEmail" Role="EmpresaEmail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Email">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="EmpresaEmail">
+        <PropertyRef Name="codigoEmail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PessoaEmail">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoEmail" />
+    <Property Type="Int32" Name="codigoPessoa" />
+    <NavigationProperty Name="Email" Relationship="dbKawaiModel.FK_PessoaEmail_Email" FromRole="PessoaEmail" ToRole="Email" />
+    <NavigationProperty Name="Pessoa" Relationship="dbKawaiModel.FK_PessoaEmail_Pessoa" FromRole="PessoaEmail" ToRole="Pessoa" />
+  </EntityType>
+  <EntityType Name="PessoaEndereco">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoEndereco" />
+    <Property Type="Int32" Name="codigoPessoa" />
+    <NavigationProperty Name="Endereco" Relationship="dbKawaiModel.FK_PessoaEndereco_Endereco" FromRole="PessoaEndereco" ToRole="Endereco" />
+    <NavigationProperty Name="Pessoa" Relationship="dbKawaiModel.FK_PessoaEndereco_Pessoa" FromRole="PessoaEndereco" ToRole="Pessoa" />
+  </EntityType>
+  <EntityType Name="PessoaTelefone">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoTelefone" />
+    <Property Type="Int32" Name="codigoPessoa" />
+    <NavigationProperty Name="Telefone" Relationship="dbKawaiModel.FK_PessoaTelefone_Telefone" FromRole="PessoaTelefone" ToRole="Telefone" />
+    <NavigationProperty Name="Pessoa" Relationship="dbKawaiModel.FK_PessoaTelefone_Pessoa" FromRole="PessoaTelefone" ToRole="Pessoa" />
+  </EntityType>
+  <Association Name="FK_PessoaEmail_Email">
+    <End Type="dbKawaiModel.Email" Role="Email" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.PessoaEmail" Role="PessoaEmail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Email">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="PessoaEmail">
+        <PropertyRef Name="codigoEmail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PessoaEndereco_Endereco">
+    <End Type="dbKawaiModel.Endereco" Role="Endereco" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.PessoaEndereco" Role="PessoaEndereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Endereco">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="PessoaEndereco">
+        <PropertyRef Name="codigoEndereco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="login" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="senha" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="codigoPerfil" />
+    <NavigationProperty Name="Perfil" Relationship="dbKawaiModel.FK_Login_Perfil" FromRole="Login" ToRole="Perfil" />
+    <NavigationProperty Name="PessoaLogin" Relationship="dbKawaiModel.FK_PessoaLogin_Login" FromRole="Login" ToRole="PessoaLogin" />
+    <NavigationProperty Name="Pessoa" Relationship="dbKawaiModel.FK_Pessoa_Login" FromRole="Login" ToRole="Pessoa" />
+  </EntityType>
+  <EntityType Name="Perfil">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="perfil" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="descricao" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Login" Relationship="dbKawaiModel.FK_Login_Perfil" FromRole="Perfil" ToRole="Login" />
+  </EntityType>
+  <Association Name="FK_Login_Perfil">
+    <End Type="dbKawaiModel.Perfil" Role="Perfil" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.Login" Role="Login" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Perfil">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Login">
+        <PropertyRef Name="codigoPerfil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EmpresaEndereco">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoEndereco" />
+    <Property Type="Int32" Name="codigoEmpresa" />
+    <NavigationProperty Name="Endereco" Relationship="dbKawaiModel.FK_EmpresaEndereco_Endereco" FromRole="EmpresaEndereco" ToRole="Endereco" />
+    <NavigationProperty Name="Empresa" Relationship="dbKawaiModel.FK_EmpresaEndereco_Empresa" FromRole="EmpresaEndereco" ToRole="Empresa" />
+  </EntityType>
+  <Association Name="FK_EmpresaEndereco_Endereco">
+    <End Type="dbKawaiModel.Endereco" Role="Endereco" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.EmpresaEndereco" Role="EmpresaEndereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Endereco">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="EmpresaEndereco">
+        <PropertyRef Name="codigoEndereco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EmpresaTelefone">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoTelefone" />
+    <Property Type="Int32" Name="codigoEmpresa" />
+    <NavigationProperty Name="Telefone" Relationship="dbKawaiModel.FK_EmpresaTelefone_Telefone" FromRole="EmpresaTelefone" ToRole="Telefone" />
+    <NavigationProperty Name="Empresa" Relationship="dbKawaiModel.FK_EmpresaTelefone_Empresa" FromRole="EmpresaTelefone" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Telefone">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ddi" />
+    <Property Type="Int32" Name="ddd" />
+    <Property Type="String" Name="numero" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="codigoTipo" />
+    <NavigationProperty Name="EmpresaTelefone" Relationship="dbKawaiModel.FK_EmpresaTelefone_Telefone" FromRole="Telefone" ToRole="EmpresaTelefone" />
+    <NavigationProperty Name="PessoaTelefone" Relationship="dbKawaiModel.FK_PessoaTelefone_Telefone" FromRole="Telefone" ToRole="PessoaTelefone" />
+    <NavigationProperty Name="TelefoneTipo" Relationship="dbKawaiModel.FK_Telefone_TelefoneTipo" FromRole="Telefone" ToRole="TelefoneTipo" />
+  </EntityType>
+  <Association Name="FK_EmpresaTelefone_Telefone">
+    <End Type="dbKawaiModel.Telefone" Role="Telefone" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.EmpresaTelefone" Role="EmpresaTelefone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Telefone">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="EmpresaTelefone">
+        <PropertyRef Name="codigoTelefone" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PessoaTelefone_Telefone">
+    <End Type="dbKawaiModel.Telefone" Role="Telefone" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.PessoaTelefone" Role="PessoaTelefone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Telefone">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="PessoaTelefone">
+        <PropertyRef Name="codigoTelefone" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PessoaLogin">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoLogin" />
+    <Property Type="Int32" Name="codigoPessoa" />
+    <NavigationProperty Name="Login" Relationship="dbKawaiModel.FK_PessoaLogin_Login" FromRole="PessoaLogin" ToRole="Login" />
+    <NavigationProperty Name="Pessoa" Relationship="dbKawaiModel.FK_PessoaLogin_Pessoa" FromRole="PessoaLogin" ToRole="Pessoa" />
+  </EntityType>
+  <Association Name="FK_PessoaLogin_Login">
+    <End Type="dbKawaiModel.Login" Role="Login" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.PessoaLogin" Role="PessoaLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Login">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="PessoaLogin">
+        <PropertyRef Name="codigoLogin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Pessoa">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="nome" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RG" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CPF" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="codigoEmpresa" />
+    <Property Type="Int32" Name="codigoLogin" />
+    <Property Type="String" Name="cargo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ddi" />
+    <Property Type="Int32" Name="ddd" />
+    <Property Type="String" Name="numero" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Login" Relationship="dbKawaiModel.FK_Pessoa_Login" FromRole="Pessoa" ToRole="Login" />
+    <NavigationProperty Name="PessoaEmail" Relationship="dbKawaiModel.FK_PessoaEmail_Pessoa" FromRole="Pessoa" ToRole="PessoaEmail" />
+    <NavigationProperty Name="PessoaEndereco" Relationship="dbKawaiModel.FK_PessoaEndereco_Pessoa" FromRole="Pessoa" ToRole="PessoaEndereco" />
+    <NavigationProperty Name="PessoaLogin" Relationship="dbKawaiModel.FK_PessoaLogin_Pessoa" FromRole="Pessoa" ToRole="PessoaLogin" />
+    <NavigationProperty Name="PessoaTelefone" Relationship="dbKawaiModel.FK_PessoaTelefone_Pessoa" FromRole="Pessoa" ToRole="PessoaTelefone" />
+    <NavigationProperty Name="Empresa" Relationship="dbKawaiModel.FK_Pessoa_Empresa" FromRole="Pessoa" ToRole="Empresa" />
+    <Property Type="Int32" Name="codigoTipo" />
+    <NavigationProperty Name="PessoaTipo" Relationship="dbKawaiModel.PessoaTipoPessoa" FromRole="Pessoa" ToRole="PessoaTipo" />
+  </EntityType>
+  <Association Name="FK_Pessoa_Login">
+    <End Type="dbKawaiModel.Login" Role="Login" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.Pessoa" Role="Pessoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Login">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Pessoa">
+        <PropertyRef Name="codigoLogin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PessoaEmail_Pessoa">
+    <End Type="dbKawaiModel.Pessoa" Role="Pessoa" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.PessoaEmail" Role="PessoaEmail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="PessoaEmail">
+        <PropertyRef Name="codigoPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PessoaEndereco_Pessoa">
+    <End Type="dbKawaiModel.Pessoa" Role="Pessoa" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.PessoaEndereco" Role="PessoaEndereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="PessoaEndereco">
+        <PropertyRef Name="codigoPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PessoaLogin_Pessoa">
+    <End Type="dbKawaiModel.Pessoa" Role="Pessoa" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.PessoaLogin" Role="PessoaLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="PessoaLogin">
+        <PropertyRef Name="codigoPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PessoaTelefone_Pessoa">
+    <End Type="dbKawaiModel.Pessoa" Role="Pessoa" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.PessoaTelefone" Role="PessoaTelefone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="PessoaTelefone">
+        <PropertyRef Name="codigoPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="MovimentoGrupo">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Grupo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MovimentoGrupoConta" Relationship="dbKawaiModel.FK_MovimentoGrupoConta_MovimentoGrupo" FromRole="MovimentoGrupo" ToRole="MovimentoGrupoConta" />
+  </EntityType>
+  <EntityType Name="MovimentoGrupoConta">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoGrupo" />
+    <Property Type="String" Name="Conta" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MovimentoGrupo" Relationship="dbKawaiModel.FK_MovimentoGrupoConta_MovimentoGrupo" FromRole="MovimentoGrupoConta" ToRole="MovimentoGrupo" />
+  </EntityType>
+  <EntityType Name="MovimentoPagamento">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FormaPagamento" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Movimento" Relationship="dbKawaiModel.FK_Movimento_MovimentoPagamento" FromRole="MovimentoPagamento" ToRole="Movimento" />
+  </EntityType>
+  <Association Name="FK_MovimentoGrupoConta_MovimentoGrupo">
+    <End Type="dbKawaiModel.MovimentoGrupo" Role="MovimentoGrupo" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.MovimentoGrupoConta" Role="MovimentoGrupoConta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MovimentoGrupo">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="MovimentoGrupoConta">
+        <PropertyRef Name="codigoGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Movimento">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoMovimento" Nullable="false" />
+    <Property Type="DateTime" Name="dataEmissao" Nullable="false" />
+    <Property Type="String" Name="Documento" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Observacao" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dataVencimento" Nullable="false" />
+    <Property Type="Decimal" Name="ValorOriginal" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="dataPagamento" />
+    <Property Type="Decimal" Name="ValorFinal" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="codigoConta" Nullable="false" />
+    <Property Type="Int32" Name="codigoPagamento" Nullable="false" />
+    <NavigationProperty Name="MovimentoPagamento" Relationship="dbKawaiModel.FK_Movimento_MovimentoPagamento" FromRole="Movimento" ToRole="MovimentoPagamento" />
+  </EntityType>
+  <Association Name="FK_Movimento_MovimentoPagamento">
+    <End Type="dbKawaiModel.MovimentoPagamento" Role="MovimentoPagamento" Multiplicity="1" />
+    <End Type="dbKawaiModel.Movimento" Role="Movimento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MovimentoPagamento">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Movimento">
+        <PropertyRef Name="codigoPagamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="razaoSocial" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="nomeFantasia" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CNPJ" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="inscricaoEstadual" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="site" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="codigoMatriz" />
+    <Property Type="Int32" Name="codigoEndereco" />
+    <Property Type="Boolean" Name="flagPessoaFisica" />
+    <Property Type="String" Name="controleCliente" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IE" MaxLength="12" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Contrato" Relationship="dbKawaiModel.FK_Contrato_Empresa" FromRole="Empresa" ToRole="Contrato" />
+    <NavigationProperty Name="Empresa1" Relationship="dbKawaiModel.FK_Empresa_Empresa" FromRole="Empresa" ToRole="Empresa1" />
+    <NavigationProperty Name="Empresa2" Relationship="dbKawaiModel.FK_Empresa_Empresa" FromRole="Empresa1" ToRole="Empresa" />
+    <NavigationProperty Name="EmpresaEmail" Relationship="dbKawaiModel.FK_EmpresaEmail_Empresa" FromRole="Empresa" ToRole="EmpresaEmail" />
+    <NavigationProperty Name="EmpresaEndereco" Relationship="dbKawaiModel.FK_EmpresaEndereco_Empresa" FromRole="Empresa" ToRole="EmpresaEndereco" />
+    <NavigationProperty Name="EmpresaTelefone" Relationship="dbKawaiModel.FK_EmpresaTelefone_Empresa" FromRole="Empresa" ToRole="EmpresaTelefone" />
+    <NavigationProperty Name="Pessoa" Relationship="dbKawaiModel.FK_Pessoa_Empresa" FromRole="Empresa" ToRole="Pessoa" />
+    <NavigationProperty Name="OS" Relationship="dbKawaiModel.FK_OS_Empresa" FromRole="Empresa" ToRole="OS" />
+  </EntityType>
+  <Association Name="FK_Contrato_Empresa">
+    <End Type="dbKawaiModel.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.Contrato" Role="Contrato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Contrato">
+        <PropertyRef Name="codigoEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_Empresa">
+    <End Type="dbKawaiModel.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.Empresa" Role="Empresa1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Empresa1">
+        <PropertyRef Name="codigoMatriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaEmail_Empresa">
+    <End Type="dbKawaiModel.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.EmpresaEmail" Role="EmpresaEmail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="EmpresaEmail">
+        <PropertyRef Name="codigoEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaEndereco_Empresa">
+    <End Type="dbKawaiModel.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.EmpresaEndereco" Role="EmpresaEndereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="EmpresaEndereco">
+        <PropertyRef Name="codigoEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaTelefone_Empresa">
+    <End Type="dbKawaiModel.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.EmpresaTelefone" Role="EmpresaTelefone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="EmpresaTelefone">
+        <PropertyRef Name="codigoEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pessoa_Empresa">
+    <End Type="dbKawaiModel.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.Pessoa" Role="Pessoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Pessoa">
+        <PropertyRef Name="codigoEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OSItem">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoOS" Nullable="false" />
+    <Property Type="Int32" Name="codigoControle" Nullable="false" />
+    <Property Type="Int32" Name="codigoServico" Nullable="false" />
+    <Property Type="String" Name="Observacao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="valorServico" Precision="18" Scale="2" />
+    <NavigationProperty Name="ReservaOSItem" Relationship="dbKawaiModel.FK_ReservaOSItem_OSItem" FromRole="OSItem" ToRole="ReservaOSItem" />
+    <NavigationProperty Name="Item" Relationship="dbKawaiModel.FK_OSItem_Item" FromRole="OSItem" ToRole="Item" />
+    <NavigationProperty Name="OS" Relationship="dbKawaiModel.FK_OSItem_OS" FromRole="OSItem" ToRole="OS" />
+  </EntityType>
+  <EntityType Name="ReservaOSItem">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoItem" Nullable="false" />
+    <Property Type="Int32" Name="codigoReserva" Nullable="false" />
+    <NavigationProperty Name="OSItem" Relationship="dbKawaiModel.FK_ReservaOSItem_OSItem" FromRole="ReservaOSItem" ToRole="OSItem" />
+    <NavigationProperty Name="Reserva" Relationship="dbKawaiModel.FK_ReservaOSItem_Reserva" FromRole="ReservaOSItem" ToRole="Reserva" />
+  </EntityType>
+  <Association Name="FK_ReservaOSItem_OSItem">
+    <End Type="dbKawaiModel.OSItem" Role="OSItem" Multiplicity="1" />
+    <End Type="dbKawaiModel.ReservaOSItem" Role="ReservaOSItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OSItem">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="ReservaOSItem">
+        <PropertyRef Name="codigoItem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OSStatus">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="OS" Relationship="dbKawaiModel.FK_OS_OSStatus" FromRole="OSStatus" ToRole="OS" />
+  </EntityType>
+  <EntityType Name="AluguelTipo">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="descricao" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Item" Relationship="dbKawaiModel.FK_Item_AluguelTipo" FromRole="AluguelTipo" ToRole="Item" />
+    <Property Type="Int32" Name="codigoFormaPagamento" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="descricao" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="valor" Precision="10" Scale="2" />
+    <Property Type="Int32" Name="codigoAluguelTipo" />
+    <Property Type="Boolean" Name="flagAtivo" />
+    <NavigationProperty Name="AluguelTipo" Relationship="dbKawaiModel.FK_Item_AluguelTipo" FromRole="Item" ToRole="AluguelTipo" />
+    <NavigationProperty Name="OSItem" Relationship="dbKawaiModel.FK_OSItem_Item" FromRole="Item" ToRole="OSItem" />
+  </EntityType>
+  <Association Name="FK_Item_AluguelTipo">
+    <End Type="dbKawaiModel.AluguelTipo" Role="AluguelTipo" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.Item" Role="Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AluguelTipo">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Item">
+        <PropertyRef Name="codigoAluguelTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OSItem_Item">
+    <End Type="dbKawaiModel.Item" Role="Item" Multiplicity="1" />
+    <End Type="dbKawaiModel.OSItem" Role="OSItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="OSItem">
+        <PropertyRef Name="codigoServico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ReservaTipo">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Reserva" Relationship="dbKawaiModel.FK_Reserva_ReservaTipo" FromRole="ReservaTipo" ToRole="Reserva" />
+  </EntityType>
+  <EntityType Name="Reserva">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoEstudio" Nullable="false" />
+    <Property Type="Int32" Name="codigoEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="codigoStatus" Nullable="false" />
+    <Property Type="DateTime" Name="dataReserva" Nullable="false" />
+    <Property Type="String" Name="horaInicio" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="horaTerminio" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="nomeRequisitante" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="nomeResponsavel" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dataCadastro" />
+    <NavigationProperty Name="ReservaTipo" Relationship="dbKawaiModel.FK_Reserva_ReservaTipo" FromRole="Reserva" ToRole="ReservaTipo" />
+    <NavigationProperty Name="ReservaOSItem" Relationship="dbKawaiModel.FK_ReservaOSItem_Reserva" FromRole="Reserva" ToRole="ReservaOSItem" />
+  </EntityType>
+  <Association Name="FK_Reserva_ReservaTipo">
+    <End Type="dbKawaiModel.ReservaTipo" Role="ReservaTipo" Multiplicity="1" />
+    <End Type="dbKawaiModel.Reserva" Role="Reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReservaTipo">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="codigoStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReservaOSItem_Reserva">
+    <End Type="dbKawaiModel.Reserva" Role="Reserva" Multiplicity="1" />
+    <End Type="dbKawaiModel.ReservaOSItem" Role="ReservaOSItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reserva">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="ReservaOSItem">
+        <PropertyRef Name="codigoReserva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EnderecoTipo">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="descricao" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Endereco" Relationship="dbKawaiModel.FK_Endereco_EnderecoTipo" FromRole="EnderecoTipo" ToRole="Endereco" />
+  </EntityType>
+  <EntityType Name="TelefoneTipo">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="descricao" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Telefone" Relationship="dbKawaiModel.FK_Telefone_TelefoneTipo" FromRole="TelefoneTipo" ToRole="Telefone" />
+  </EntityType>
+  <Association Name="FK_Endereco_EnderecoTipo">
+    <End Type="dbKawaiModel.EnderecoTipo" Role="EnderecoTipo" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.Endereco" Role="Endereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EnderecoTipo">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="codigoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Telefone_TelefoneTipo">
+    <End Type="dbKawaiModel.TelefoneTipo" Role="TelefoneTipo" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.Telefone" Role="Telefone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TelefoneTipo">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Telefone">
+        <PropertyRef Name="codigoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OS">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="codigoEmpresa" Nullable="false" />
+    <Property Type="String" Name="nomeRequisitante" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="nomeResponsavel" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Trabalho" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="controleCliente" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dataInicio" />
+    <Property Type="DateTime" Name="dataTerminio" />
+    <Property Type="Int32" Name="codigoStatus" />
+    <Property Type="Int32" Name="codigoTipo" />
+    <NavigationProperty Name="Empresa" Relationship="dbKawaiModel.FK_OS_Empresa" FromRole="OS" ToRole="Empresa" />
+    <NavigationProperty Name="OSStatus" Relationship="dbKawaiModel.FK_OS_OSStatus" FromRole="OS" ToRole="OSStatus" />
+    <NavigationProperty Name="OSItem" Relationship="dbKawaiModel.FK_OSItem_OS" FromRole="OS" ToRole="OSItem" />
+  </EntityType>
+  <Association Name="FK_OS_Empresa">
+    <End Type="dbKawaiModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="dbKawaiModel.OS" Role="OS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="OS">
+        <PropertyRef Name="codigoEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OS_OSStatus">
+    <End Type="dbKawaiModel.OSStatus" Role="OSStatus" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.OS" Role="OS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OSStatus">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="OS">
+        <PropertyRef Name="codigoStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OSItem_OS">
+    <End Type="dbKawaiModel.OS" Role="OS" Multiplicity="1" />
+    <End Type="dbKawaiModel.OSItem" Role="OSItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OS">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="OSItem">
+        <PropertyRef Name="codigoOS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PessoaTipo">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Type="Int32" Name="codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="descricao" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Pessoa" Relationship="dbKawaiModel.PessoaTipoPessoa" FromRole="PessoaTipo" ToRole="Pessoa" />
+  </EntityType>
+  <Association Name="PessoaTipoPessoa">
+    <End Type="dbKawaiModel.PessoaTipo" Role="PessoaTipo" Multiplicity="0..1" />
+    <End Type="dbKawaiModel.Pessoa" Role="Pessoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PessoaTipo">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Pessoa">
+        <PropertyRef Name="codigoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
